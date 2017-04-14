@@ -19,10 +19,9 @@ router.post('/', function(req, res, next) {
 	db.User.find({actno:userAccountNumber} , function(err,foundData) {
 
 		if(!err) {
-			
+
 			res.end(foundData[0]["balance"]+'');
 		}
-
 
 	});
 

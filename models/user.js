@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var promise  = require('bluebird');
+
 var user = mongoose.Schema({
     name:{
         type:String

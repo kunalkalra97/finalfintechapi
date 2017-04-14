@@ -13,7 +13,8 @@ var client_token= require('./routes/client_token');
 var dateup = require('./routes/date');
 var chkonline = require('./routes/chkonline');
 var checkBalance = require('./routes/checkBalance');
-
+var signup = require('./routes/signup');
+var login = require('./routes/login');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -31,9 +32,8 @@ app.use('/client_token',client_token);
 app.use('/date',dateup);
 app.use('/chkonline',chkonline);
 app.use('/checkBalance',checkBalance);
-app.get('/',function(req,res){
-	res.send("Hi");
-});
+app.use('/signup',signup);
+app.use('/login',login);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
